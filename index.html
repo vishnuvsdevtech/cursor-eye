@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursor Eye — a page that watches back</title>
+<meta name="description" content="An eye that tracks the pointer, blinks, dilates with speed, and looks away if you stare at it.">
+<meta name="theme-color" content="#08090b">
+<link rel="canonical" href="https://vishnuvsdevtech.github.io/cursor-eye/">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+:root{--acc:#7fd1ff}
+.stage{border-color:rgba(127,209,255,.16)}
+</style></head>
+<body><div class="wrap">
+<header><h1>A page that <em>watches back</em></h1><span class="tag">gaze · blink · aversion</span></header>
+<div class="stage"><canvas id="c" width="1000" height="420"></canvas></div>
+<div class="meter"><span>gaze <b id="m-g">0, 0</b></span><span>blinks <b id="m-b">0</b></span>
+  <span>stare <b id="m-s">0.0s</b></span><span>pupil <b id="m-p">1.0</b></span></div>
+<div class="notes"><p>Three behaviours make this read as alive rather than as an animation: the iris chases the pointer on a spring so it lags like a real saccade landing, the lid blinks on an irregular timer, and the pupil dilates with pointer speed — a genuine autonomic response repurposed as a UI signal.</p>
+<p>The fourth is the interesting one. Hold the pointer on the eye for two and a half seconds and it looks away, then blinks. Uncomfortable for three seconds, then charming — and it's the only interaction here that changes how people behave rather than how the page behaves.</p></div>
+<footer><span>Cursor Eye · POC</span><span>respect the blink</span></footer>
+</div>
+<script src="assets/app.js"></script></body></html>
